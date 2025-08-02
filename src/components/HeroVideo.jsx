@@ -34,8 +34,8 @@ const HeroVideo = () => {
           console.log('Attempting to load fallback video sources');
         }}
       >
-        <source src="/src/assets/Heroclip.mp4" type="video/mp4" />
-        <source src="/src/assets/Heroclip.mov" type="video/quicktime" />
+        <source src="/videos/Heroclip.mp4" type="video/mp4" />
+        <source src="/videos/Heroclip.mov" type="video/quicktime" />
 
         Your browser does not support the video tag.
       </video>

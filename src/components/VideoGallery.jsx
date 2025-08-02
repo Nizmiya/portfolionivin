@@ -1,9 +1,9 @@
 import React from 'react'
 import './VideoGallery.css'
-import video1 from '../assets/video1.mp4'
-import video2 from '../assets/video2.mp4'
-import video3 from '../assets/video3.mp4'
-import video4 from '../assets/video4.mp4'
+const video1 = '/videos/video1.mp4'
+const video2 = '/videos/video2.mp4'
+const video3 = '/videos/video3.mp4'
+const video4 = '/videos/video4.mp4'
 
 const VideoGallery = () => {
   const videos = [
