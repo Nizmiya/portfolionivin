@@ -7,7 +7,7 @@ const HeroVideo = () => {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      video.addEventListener('loadstart', () => console.log('Hero video loading started - trying local Heroclip'));
+      video.addEventListener('loadstart', () => console.log('Hero video loading started'));
       video.addEventListener('canplay', () => console.log('Hero video can play successfully'));
       video.addEventListener('error', (e) => console.log('Hero video error:', e));
       video.addEventListener('loadeddata', () => console.log('Hero video data loaded successfully'));
@@ -30,13 +30,15 @@ const HeroVideo = () => {
         playsInline
         onError={(e) => {
           console.log('Video error:', e);
-          // Keep video element visible but try fallback sources
           console.log('Attempting to load fallback video sources');
         }}
       >
+        {/* Try local video first */}
         <source src="/videos/Heroclip.mp4" type="video/mp4" />
-        <source src="/videos/Heroclip.mov" type="video/quicktime" />
-
+        
+        {/* Fallback to a sample video if local fails */}
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+        
         Your browser does not support the video tag.
       </video>
 

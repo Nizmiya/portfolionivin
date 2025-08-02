@@ -1,31 +1,27 @@
 import React from 'react'
 import './VideoGallery.css'
-const video1 = '/videos/video1.mp4'
-const video2 = '/videos/video2.mp4'
-const video3 = '/videos/video3.mp4'
-const video4 = '/videos/video4.mp4'
 
 const VideoGallery = () => {
   const videos = [
     {
       id: 1,
-      src: video1,
-      title: "Through My Lens"
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      title: "Project 1"
     },
     {
       id: 2,
-      src: video2,
-      title: "Visual Stories"
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      title: "Project 2"
     },
     {
       id: 3,
-      src: video3,
-      title: "Moments of Calm"
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
+      title: "Project 3"
     },
     {
       id: 4,
-      src: video4,
-      title: "Whispers of the Lens"
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_10mb.mp4",
+      title: "Project 4"
     }
   ]
 
