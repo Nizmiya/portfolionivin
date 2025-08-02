@@ -1,29 +1,46 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './HeroVideo.css'
 
 const HeroVideo = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.addEventListener('loadstart', () => console.log('Hero video loading started'));
+      video.addEventListener('canplay', () => console.log('Hero video can play successfully'));
+      video.addEventListener('error', (e) => console.log('Hero video error:', e));
+      video.addEventListener('loadeddata', () => console.log('Hero video data loaded successfully'));
+
+      // Force play after a short delay
+      setTimeout(() => {
+        video.play().catch(e => console.log('Hero video play error:', e));
+      }, 100);
+    }
+  }, []);
+
   return (
     <section id="hero" className="hero-video">
-      {/* YouTube Video Background */}
-      <div className="hero-video__background">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-          title="Hero Background Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '100vw',
-            height: '100vh',
-            transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none',
-            zIndex: 1
-          }}
-        />
-      </div>
+      <video
+        ref={videoRef}
+        className="hero-video__background"
+        autoPlay
+        muted
+        loop
+        playsInline
+        onError={(e) => {
+          console.log('Video error:', e);
+          console.log('Attempting to load fallback video sources');
+        }}
+      >
+        {/* Try local video first */}
+        <source src="/videos/Heroclip.mp4" type="video/mp4" />
+        
+        {/* Fallback to a sample video if local fails */}
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+        
+        Your browser does not support the video tag.
+      </video>
 
       <div className="hero-video__overlay">
         <div className="hero-video__content">

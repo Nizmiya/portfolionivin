@@ -5,22 +5,22 @@ const VideoGallery = () => {
   const videos = [
     {
       id: 1,
-      youtubeId: "dQw4w9WgXcQ",
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
       title: "Project 1"
     },
     {
       id: 2,
-      youtubeId: "jNQXAC9IVRw",
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
       title: "Project 2"
     },
     {
       id: 3,
-      youtubeId: "kJQP7kiw5Fk",
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
       title: "Project 3"
     },
     {
       id: 4,
-      youtubeId: "9bZkp7q19f0",
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_10mb.mp4",
       title: "Project 4"
     }
   ]
@@ -34,14 +34,20 @@ const VideoGallery = () => {
           {videos.map((video) => (
             <div key={video.id} className="video-item">
               <div className="video-player">
-                <iframe
+                <video 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="video-player__video"
-                  src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=0&mute=1&loop=1&playlist=${video.youtubeId}&controls=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1`}
-                  title={video.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                  onError={(e) => {
+                    console.log(`Video ${video.id} error:`, e);
+                    console.log(`Failed to load: ${video.src}`);
+                  }}
+                >
+                  <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 
                 <div className="video-info">
                   <h3 className="video-info__title">{video.title}</h3>
