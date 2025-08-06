@@ -159,4 +159,66 @@
   .video-info__description {
     font-size: 0.75rem;
   }
+}
+
+/* iPhone SE and small Android devices */
+@media (max-width: 375px) {
+  .video-gallery {
+    padding: 20px 0 8px 0;
+  }
+  
+  .video-gallery__title {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+  }
+  
+  .video-info {
+    padding: 4px 12px;
+  }
+  
+  .video-info__title {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  
+  .video-info__description {
+    font-size: 0.7rem;
+  }
+}
+
+/* iPhone 12/13/14 Pro and similar devices */
+@media (max-width: 390px) {
+  .video-gallery__title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Large Android devices and tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .video-gallery__title {
+    font-size: 1.8rem;
+  }
+  
+  .video-info__title {
+    font-size: 1.1rem;
+  }
+}
+
+/* iPad and tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .video-gallery__title {
+    font-size: 2.2rem;
+  }
+  
+  .video-info__title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Ensure videos are responsive and don't overflow */
+.video-player__video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 } 

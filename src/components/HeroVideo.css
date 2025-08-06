@@ -158,4 +158,64 @@
     padding: 10px 25px;
     font-size: 0.75rem;
   }
+}
+
+/* iPhone SE and small Android devices */
+@media (max-width: 375px) {
+  .hero-video__title {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-video__name {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero-video__tagline {
+    font-size: 0.75rem;
+    margin-bottom: 40px;
+  }
+  
+  .hero-video__cta {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* iPhone 12/13/14 Pro and similar devices */
+@media (max-width: 390px) {
+  .hero-video__title {
+    font-size: 1.9rem;
+  }
+}
+
+/* Large Android devices and tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-video__title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-video__name {
+    font-size: 1.1rem;
+  }
+  
+  .hero-video__tagline {
+    font-size: 0.95rem;
+  }
+}
+
+/* iPad and tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-video__title {
+    font-size: 3.2rem;
+  }
+}
+
+/* Ensure video background is responsive */
+.hero-video__background {
+  min-height: 100vh;
+  min-width: 100vw;
 } 

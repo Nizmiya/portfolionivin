@@ -5,23 +5,23 @@ const VideoGallery = () => {
   const videos = [
     {
       id: 1,
-      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-      title: "Project 1"
+      src: "/videos/video1.mp4",
+      title: "Through My Lens"
     },
     {
       id: 2,
-      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
-      title: "Project 2"
+      src: "/videos/video2.mp4",
+      title: "Visual Stories"
     },
     {
       id: 3,
-      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
-      title: "Project 3"
+      src: "/videos/video3.mp4",
+      title: "Moments of Calm"
     },
     {
       id: 4,
-      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_10mb.mp4",
-      title: "Project 4"
+      src: "/videos/video4.mp4",
+      title: "Whispers of the Lens"
     }
   ]
 

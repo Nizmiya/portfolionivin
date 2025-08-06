@@ -2,6 +2,7 @@
   min-height: 100vh;
   overflow-x: hidden;
   max-width: 100vw;
+  width: 100%;
 }
 
 section {
@@ -9,4 +10,47 @@ section {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
+}
+
+/* Universal responsive fixes */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling on all devices */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Ensure images and videos don't overflow */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container responsive behavior */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* iPhone notch and safe area support */
+@supports (padding: max(0px)) {
+  .container {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  section {
+    min-height: 100vh;
+    padding: 20px 0;
+  }
 } 

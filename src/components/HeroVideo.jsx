@@ -33,11 +33,8 @@ const HeroVideo = () => {
           console.log('Attempting to load fallback video sources');
         }}
       >
-        {/* Try local video first */}
-        <source src="/videos/Heroclip.mp4" type="video/mp4" />
-        
-        {/* Fallback to a sample video if local fails */}
-        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+        {/* Hero video from public/videos directory */}
+        <source src="/videos/Herovideo.mp4" type="video/mp4" />
         
         Your browser does not support the video tag.
       </video>

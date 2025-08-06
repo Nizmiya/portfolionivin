@@ -37,6 +37,11 @@ const Contact = () => {
         </div>
         
         <div className="contact__footer">
+          <div className="contact__info">
+            <div className="contact__phone">
+              <span className="contact__number">UAE | +971 55 397 9143</span>
+            </div>
+          </div>
           <p>&copy; 2025 Nivin Logan Photography. All rights reserved.</p>
         </div>
       </div>

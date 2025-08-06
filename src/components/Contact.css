@@ -252,6 +252,33 @@
   color: #666;
 }
 
+.contact__info {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact__phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact__label {
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.contact__number {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 1024px) {
   .contact {
     padding: 6px 20px 20px 20px;
@@ -359,5 +386,69 @@
   .submit-btn {
     font-size: 0.8rem;
     padding: 12px 30px;
+  }
+}
+
+/* iPhone SE and small Android devices */
+@media (max-width: 375px) {
+  .contact {
+    padding: 3px 12px 12px 12px;
+  }
+  
+  .contact__text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .contact__description {
+    font-size: 0.85rem;
+  }
+  
+  .contact__btn {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    min-width: 110px;
+  }
+  
+  .contact__footer {
+    font-size: 0.75rem;
+    margin-top: 50px;
+  }
+  
+  .contact__number {
+    font-size: 1rem;
+  }
+}
+
+/* iPhone 12/13/14 Pro and similar devices */
+@media (max-width: 390px) {
+  .contact__text h3 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Large Android devices and tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact__text h3 {
+    font-size: 1.8rem;
+  }
+  
+  .contact__description {
+    font-size: 1rem;
+  }
+  
+  .contact__btn {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+}
+
+/* iPad and tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact__text h3 {
+    font-size: 2rem;
+  }
+  
+  .contact__description {
+    font-size: 1.05rem;
   }
 } 
