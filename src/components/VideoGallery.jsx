@@ -5,22 +5,22 @@ const VideoGallery = () => {
   const videos = [
     {
       id: 1,
-      src: "/videos/video1.mp4",
+      src: "https://res.cloudinary.com/drjolim2m/video/upload/v1/video1_jkugp8.mp4",
       title: "Through My Lens"
     },
     {
       id: 2,
-      src: "/videos/video2.mp4",
+      src: "https://res.cloudinary.com/drjolim2m/video/upload/v1/video2_diwfvv.mp4",
       title: "Visual Stories"
     },
     {
       id: 3,
-      src: "/videos/video3.mp4",
+      src: "https://res.cloudinary.com/drjolim2m/video/upload/v1/video3_esjchp.mp4",
       title: "Moments of Calm"
     },
     {
       id: 4,
-      src: "/videos/video4.mp4",
+      src: "https://res.cloudinary.com/drjolim2m/video/upload/v1/video4_dm2kbc.mp4",
       title: "Whispers of the Lens"
     }
   ]
