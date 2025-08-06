@@ -33,8 +33,8 @@ const HeroVideo = () => {
           console.log('Attempting to load fallback video sources');
         }}
       >
-        {/* Hero video from public/videos directory */}
-        <source src="/videos/Herovideo.mp4" type="video/mp4" />
+        {/* Hero video from Cloudinary */}
+        <source src="https://player.cloudinary.com/embed/?cloud_name=drjolim2m&public_id=Herovideo_qr30a3&profile=cld-default" type="video/mp4" />
         
         Your browser does not support the video tag.
       </video>
