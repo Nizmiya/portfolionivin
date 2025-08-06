@@ -34,7 +34,7 @@ const HeroVideo = () => {
         }}
       >
         {/* Hero video from Cloudinary */}
-        <source src="https://player.cloudinary.com/embed/?cloud_name=drjolim2m&public_id=Herovideo_qr30a3&profile=cld-default" type="video/mp4" />
+        <source src="https://res.cloudinary.com/drjolim2m/video/upload/v1/Herovideo_qr30a3.mp4" type="video/mp4" />
         
         Your browser does not support the video tag.
       </video>
